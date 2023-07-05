@@ -5,10 +5,11 @@ URL = "http://127.0.0.1:8000/studentapi/"
 
 def get_data(id = None):
     data = {}
+    headers = {'content-type': 'application/json'}
     if id is not None:
         data  = {'id': id} 
     json_data = json.dumps(data)
-    resp = requests.get(url = URL, data=json_data)
+    resp = requests.get(url = URL, headers=headers, data=json_data)
     data = resp.json()
     print(data)
 
@@ -20,12 +21,13 @@ def post_data():
         'roll': 189,
         'city': 'nisarga'
     }
+    headers = {'content-type': 'application/json'}
 
     json_data = json.dumps(data)
-    resp = requests.post(url = URL, data=json_data)
+    resp = requests.post(url = URL, headers=headers, data=json_data)
     data = resp.json()
     print(data)
-post_data()
+# post_data()
 
 def update_data():
     data = {
@@ -34,9 +36,10 @@ def update_data():
         'roll': 76,
         'city': 'HassanKarnataka'
     }
+    headers = {'content-type': 'application/json'}
 
     json_data = json.dumps(data)
-    resp = requests.put(url = URL, data=json_data)
+    resp = requests.put(url = URL, headers=headers,data=json_data)
     data = resp.json()
     print(data)
 # update_data()
@@ -45,12 +48,12 @@ def delete_data():
     data = {
         'id': 1
     }
-
+    headers = {'content-type': 'application/json'}
     json_data = json.dumps(data)
-    resp = requests.delete(url = URL, data=json_data)
+    resp = requests.delete(url = URL, headers=headers, data=json_data)
     data = resp.json()
     print(data)
-# delete_data()
+delete_data()
 
 
 

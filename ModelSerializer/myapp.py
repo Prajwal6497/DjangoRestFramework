@@ -16,8 +16,8 @@ def get_data(id = None):
 
 def post_data():
     data = {
-        'name': 'pushma',
-        'roll': 189,
+        'name': 'adhira',
+        'roll': 199,
         'city': 'nisarga'
     }
 
@@ -29,10 +29,10 @@ post_data()
 
 def update_data():
     data = {
-        'id': 2,
-        'name': 'Pooja T',
+        'id': 1,
+        'name': 'Prajwal',
         'roll': 76,
-        'city': 'HassanKarnataka'
+        'city': 'Karna'
     }
 
     json_data = json.dumps(data)
