@@ -28,7 +28,6 @@ def student_api(request):
 
     if request.method == 'POST':
         json_data = request.body
-        print("!!!!!!!!!!!!!!!",request.body)
         stream = io.BytesIO(json_data)
         pythondata = JSONParser().parse(stream)
         serializer = StudentSerializer(data = pythondata)
