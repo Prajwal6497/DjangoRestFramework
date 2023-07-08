@@ -24,6 +24,7 @@ class StudentDestroy(DestroyAPIView):
 
 
 ################################# OR ################################################
+
 class StudentListCreate(ListCreateAPIView):
     queryset = Student.objects.all()
     serializer_class = StudentSerializer
